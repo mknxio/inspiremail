@@ -1,0 +1,27 @@
+{
+  "name": "inspiremail",
+  "description": "An intelligent WYSIWYG web email creator which offers you a clean & valid HTML code.",
+  "main": "",
+  "authors": [
+    "paulguzda <hello@mknx.io>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "email",
+    "template",
+    "html",
+    "code",
+    "wysiwyg"
+  ],
+  "homepage": "https://github.com/mknxio/inspiremail",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

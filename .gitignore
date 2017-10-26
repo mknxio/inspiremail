@@ -1,5 +1,8 @@
-# system files
+# system
 .DS_Store
 
-# example & development files/folders
+# examples & development files
+package-lock.json
+node_modules/
+bower_components/
 index.html
