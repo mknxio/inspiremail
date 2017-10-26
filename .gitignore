@@ -1,0 +1,5 @@
+# system files
+.DS_Store
+
+# example & development files/folders
+index.html
