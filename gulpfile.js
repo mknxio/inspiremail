@@ -1,9 +1,10 @@
 var gulp          = require('gulp'),
+    color         = require('gulp-color'),
     concat        = require('gulp-concat'),
     concatcss     = require('gulp-concat-css'),
     sass          = require('gulp-sass'),
     csso          = require('gulp-csso'),
-    autoprefixer  = require("gulp-autoprefixer"),
+    autoprefixer  = require('gulp-autoprefixer'),
     uglify        = require('gulp-uglify');
 
 /**
@@ -20,8 +21,17 @@ gulp.task('css', function () {
   ])
     .pipe(
       sass({
-        includePaths: [ "./src/stylesheets" ]
+        includePaths: ['./src/stylesheets'],
+        outputStyle: 'nested',
+        errLogToConsole: true
       })
+        .on('error', sass.logError)
+        .on('error', function () {
+            console.log(color('+-------------------------------+', 'RED'));
+            console.log(color('| SASS Compilation Error (base) |', 'RED'));
+            console.log(color('+-------------------------------+', 'RED'));
+        })
+
     )
     .pipe(
       concat('base.css')
@@ -43,8 +53,14 @@ gulp.task('css', function () {
   ])
     .pipe(
       sass({
-        paths: [ "./src/stylesheets" ]
+        paths: [ './src/stylesheets' ]
       })
+        .on('error', sass.logError)
+        .on('error', function () {
+            console.log(color('+---------------------------------+', 'RED'));
+            console.log(color('| SASS Compilation Error (themes) |', 'RED'));
+            console.log(color('+---------------------------------+', 'RED'));
+        })
     )
     .pipe(
       autoprefixer()
@@ -66,12 +82,27 @@ gulp.task('css', function () {
 
 gulp.task('js', function () {
   gulp.src([
-    './resources/js/.main.js',
-    './resources/js/.routes.js',
-    './resources/js/**/*.js'
+    './src/js/*.js',
+    './src/js/**/*.js'
   ])
     .pipe(
-      concat('inspiremail.js'/*, { newLine: ";" }*/)
+      concat('inspiremail.js', {
+        newLine: ';'
+      })
+    )
+    .pipe(
+      uglify({
+        warnings: 'verbose',
+        compress: false,
+        output: {
+            beautify: true
+        }
+      })
+        .on('error', function () {
+            console.log(color('+----------------------+', 'RED'));
+            console.log(color('| JS Compilation Error |', 'RED'));
+            console.log(color('+----------------------+', 'RED'));
+        })
     )
     .pipe(
       gulp.dest('./dist/js')
@@ -88,7 +119,7 @@ gulp.task('js', function () {
 gulp.task('watch', function () {
 
   gulp.watch(['./src/stylesheets/*.scss', './src/stylesheets/**/*.scss'], ['css']);
-  gulp.watch(['./src/js/*.js', './resources/js/**/*.js'], ['js']);
+  gulp.watch(['./src/js/*.js', './src/js/**/*.js'], ['js']);
 
 });
 
