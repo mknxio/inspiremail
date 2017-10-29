@@ -1,6 +1,6 @@
 {
   "name": "inspiremail",
-  "description": "An intelligent WYSIWYG web email creator which offers you a clean & valid HTML code.",
+  "description": "An intelligent WYSIWYG web email creator that generates for you an email-compliant HTML code.",
   "main": "",
   "authors": [
     "paulguzda <hello@mknx.io>"

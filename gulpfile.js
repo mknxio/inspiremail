@@ -93,7 +93,13 @@ gulp.task('js', function () {
     .pipe(
       uglify({
         warnings: 'verbose',
-        compress: false,
+        compress: {
+            keep_fnames: true
+        },
+        mangle: {
+            debug: true,
+            keep_fnames: true
+        },
         output: {
             beautify: true
         }
