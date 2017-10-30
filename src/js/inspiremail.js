@@ -16,25 +16,20 @@ function InspireMail (css_selector, init_options) {
     // Arguments checking
     if (!css_selector)
         throw IMError('InspireMail must be instanciated with a CSS selector as first argument.');
-    if (!$(css_selector).length)
-        throw IMError('The given CSS selector does not match any DOM element.');
 
     /**
      * Private attributes
      */
-    var _el_editor = $(css_selector);
-    // --> editor components
-    var comp_toolbar = new IM_Toolbar(),
-        comp_editor = new IM_Editor();
+    var _dom_handler = new IM_DOMHandler();
 
     /**
      * Initialization
      */
 
     function _init () {
-        _el_editor.addClass('im-container');
-        _el_editor.append(comp_toolbar.html);
-        _el_editor.append(comp_editor.html);
+        if (!_dom_handler.attach(css_selector))
+            throw IMError('The given CSS selector does not match any DOM element.');
+        _dom_handler.init();
     }
 
     _init();

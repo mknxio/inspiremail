@@ -1,0 +1,15 @@
+div.im-editor-container div.im-editor {background: green;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: 75%;
+    height: 800px;
+    min-height: 800px;
+    padding: 5px;
+    font-size: 14px;
+
+    & > div.im-editor-frame {
+        height: 100%;
+        background: white;
+    }
+}

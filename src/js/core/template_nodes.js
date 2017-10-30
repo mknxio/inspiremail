@@ -7,6 +7,6 @@
  * and tracking object representations of these.
  */
 
-function IM_Nodes () {
+function IM_TemplateNodes () {
 
 }
