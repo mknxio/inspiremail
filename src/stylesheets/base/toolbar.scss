@@ -2,61 +2,61 @@ div.im-editor-container div.im-toolbar {border: 1px solid;min-height: 300px;
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
-    width: 25%;
+    width: 20%;
     padding: 10px 10px;
     font-size: 14px;
 
-    div.im-settings {border: 1px solid;
-        font-size: 0;
-        margin: 0 0 10px 0;
+    // div.im-settings {border: 1px solid;
+    //     font-size: 0;
+    //     margin: 0 0 10px 0;
 
-        p.im-settings-title {border: 1px solid;
-            text-align: center;
-            margin: 0;
-            padding: 2px 5px;
-            font-size: 14px;
-            font-weight: 700;
-        }
+    //     p.im-settings-title {border: 1px solid;
+    //         text-align: center;
+    //         margin: 0;
+    //         padding: 2px 5px;
+    //         font-size: 14px;
+    //         font-weight: 700;
+    //     }
 
-        div.im-param {//background: red;
-            box-sizing: border-box;
-            display: inline-block;
-            width: 50%;
-            height: 30px;
-            position: relative;
-            font-size: 12px;
+    //     div.im-param {//background: red;
+    //         box-sizing: border-box;
+    //         display: inline-block;
+    //         width: 50%;
+    //         height: 30px;
+    //         position: relative;
+    //         font-size: 12px;
 
-            &:first-child { border-right: 1px solid; }
+    //         &:first-child { border-right: 1px solid; }
 
-            label {
-                display: inline-block;
-                max-width: 50%;
-                height: 30px;
-                padding: 8px 4px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
+    //         label {
+    //             display: inline-block;
+    //             max-width: 50%;
+    //             height: 30px;
+    //             padding: 8px 4px;
+    //             overflow: hidden;
+    //             text-overflow: ellipsis;
+    //             white-space: nowrap;
+    //         }
 
-            input {
-                font-size: 14px;
+    //         input {
+    //             font-size: 14px;
 
-                &[type="text"],
-                &[type="number"] {border: 1px solid #ccc;
-                    box-shadow: none;
-                    outline: none;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 50%;
-                    height: 30px;
-                    padding: 6px 6px;
-                }
+    //             &[type="text"],
+    //             &[type="number"] {border: 1px solid #ccc;
+    //                 box-shadow: none;
+    //                 outline: none;
+    //                 position: absolute;
+    //                 top: 0;
+    //                 right: 0;
+    //                 width: 50%;
+    //                 height: 30px;
+    //                 padding: 6px 6px;
+    //             }
 
-                &.im-colorpicker {
-                    padding: 6px 12px;
-                }
-            }
-        }
-    }
+    //             &.im-colorpicker {
+    //                 padding: 6px 12px;
+    //             }
+    //         }
+    //     }
+    // }
 }

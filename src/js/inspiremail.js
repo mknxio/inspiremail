@@ -26,11 +26,11 @@ function InspireMail (css_selector, init_options) {
      * Initialization
      */
 
-    function _init () {
+    function init () {
         if (!_dom_handler.attach(css_selector))
             throw IMError('The given CSS selector does not match any DOM element.');
         _dom_handler.init();
     }
 
-    _init();
+    init();
 }

@@ -56,10 +56,11 @@ gulp.task('css', function () {
         paths: [ './src/stylesheets' ]
       })
         .on('error', sass.logError)
-        .on('error', function () {
+        .on('error', function (e) {
             console.log(color('+---------------------------------+', 'RED'));
             console.log(color('| SASS Compilation Error (themes) |', 'RED'));
             console.log(color('+---------------------------------+', 'RED'));
+            console.log(e.message)
         })
     )
     .pipe(
@@ -104,10 +105,12 @@ gulp.task('js', function () {
             beautify: true
         }
       })
-        .on('error', function () {
+        .on('error', function (e) {
             console.log(color('+----------------------+', 'RED'));
             console.log(color('| JS Compilation Error |', 'RED'));
             console.log(color('+----------------------+', 'RED'));
+            console.log(e.message)
+            console.log('[line: ' + e.lineNumber + ']')
         })
     )
     .pipe(

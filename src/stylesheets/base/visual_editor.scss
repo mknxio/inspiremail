@@ -1,15 +1,37 @@
-div.im-editor-container div.im-editor {background: green;
+div.im-editor-container div.im-veditor-wrapper {background: green;
     box-sizing: border-box;
     display: inline-block;
     vertical-align: top;
-    width: 75%;
+    width: 80%;
     height: 800px;
     min-height: 800px;
-    padding: 5px;
     font-size: 14px;
 
-    & > div.im-editor-frame {
+    & > div.im-veditor-settings {border: 1px solid;background: white;
+        height: 30px;
+
+        div.im-settings {border: 1px solid;
+            display: inline-block;
+            height: 30px;
+
+            p.im-settings-title,
+            div.im-param {
+                display: inline-block;
+                vertical-align: top;
+            }
+            p.im-settings-title {
+                margin: 0;
+                padding: 0 6px;
+                font-size: 12px;
+            }
+            div.im-param {
+            }
+        }
+    }
+
+    & > div.im-veditor-frame {
         height: 100%;
+        padding: 3px;
         background: white;
     }
 }
