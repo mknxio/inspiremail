@@ -1,3 +1,3 @@
 # InspireMail
 
-An intelligent WYSIWYG web email creator that generates for you an email-compliant HTML code.
+An intelligent WYSIWYG web email creator that produces email-compliant HTML code.
